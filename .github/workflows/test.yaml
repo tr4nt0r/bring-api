@@ -9,6 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      if: ${{ github.actor != 'dependabot[bot]' }}
       - name: Get User Permission
         id: checkAccess
         uses: actions-cool/check-user-permission@v2
